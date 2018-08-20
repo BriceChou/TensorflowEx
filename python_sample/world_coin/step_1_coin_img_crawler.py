@@ -80,8 +80,8 @@ try:
     for item in country_link_list:
         country_link_name = item.attrs.get('href').replace('/', '.').split('.')[-2]
         img_folder_path = os.path.join(main_folder_name, country_link_name)
-        if os.path.exists(folder_path) is False:
-            os.makedirs(folder_path)
+        if os.path.exists(img_folder_path) is False:
+            os.makedirs(img_folder_path)
         download_single_country_coin_img(
             base_url, backup_base_url, country_link_name, img_folder_path
         )
